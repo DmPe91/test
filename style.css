@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main_header {
+  background: url("image/clouds.png") bottom, url("image/background_main.png");
+  height: 811px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header {
+  display: flex;
+  border-bottom: 1px solid #31bef4;
+}
+
+.logo > picture > img {
+  margin-left: 144px;
+  margin-top: 15px;
+}
+
+.menu > nav > ul {
+  list-style-type: none;
+  margin-left: 90px;
+  display: flex;
+}
+.menu > nav > ul > li {
+  padding: 32px;
+  margin-top: 25px;
+}
+
+.contact {
+  margin-left: 102px;
+  margin-top: 45px;
+}
+
+.submenu {
+  border-bottom: 1px solid #31bef4;
+}
+.submenu > nav > ul {
+  display: flex;
+  margin-left: 144px;
+  list-style-type: none;
+}
+.submenu > nav > ul > li {
+  padding: 30px;
+}
+.main_page {
+  text-align: center;
+  margin-top: 65px;
+}
+.main_page > h1 {
+  font-size: 60px;
+}
+.main_page > .main_text {
+  margin-top: 10px;
+  font-size: 32px;
+}
+.main_page > .main_price {
+  margin-top: 10px;
+  font-size: 35px;
+}
+.main_page > .main_button {
+  margin-top: 35px;
+  font-size: 25px;
+}
+.slider_box {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  margin-top: 41px;
+}
+.slider {
+  width: 205px;
+  height: 115px;
+  background: #f9fcfd;
+  box-shadow: 0 5px 15px rgba(33, 45, 85, 0.2);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+}
+.slider_container {
+  position: relative;
+  margin-top: 10px;
+  text-align: center;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 15px rgba(33, 45, 85, 0.1);
+  box-shadow: 0 5px 15px rgba(33, 45, 85, 0.1);
+  padding: 30px;
+}
+.slider_container::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 12px);
+  left: -12px;
+  width: 29px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f9fcfd;
+  -webkit-box-shadow: -8px 0 12px -10px rgba(34, 60, 80, 0.13) inset;
+  box-shadow: -8px 0 12px -10px rgba(34, 60, 80, 0.13) inset;
+}
+
+.slider_notifications {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: 260px 260px 260px 260px;
+}
+
+.slider_notification {
+  display: flex;
+  align-items: center;
+  background: #f9fcfd;
+  box-shadow: 0 5px 15px rgba(33, 45, 85, 0.2);
+}
+
+.header_maps {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
