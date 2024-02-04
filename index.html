@@ -5,12 +5,13 @@
     <meta name="description" content="ЖК Яблоновский" />
     <link rel="stylesheet" href="font/font.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mobile.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=66938b4d-ba70-4172-9889-919f26624532&lang=ru_RU"
       type="text/javascript"
-      charset="utf-8"
-      async
-      src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5fab11db7febe2cfd6c62426425cdd95f7f1864e9316c1e00e33e9da2e9a29b5&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
     ></script>
+    <script src="js/maps.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -34,7 +35,7 @@
             </div>
             <div class="contact">
               <p>+7(918)377-48-10</p>
-              <button>Заказать звонок</button>
+              <a href="#">Заказать звонок</a>
             </div>
           </div>
           <div class="submenu">
@@ -52,34 +53,34 @@
           </div>
         </header>
         <div class="main_page">
-          <h1>Жилой комплекс "Яблоновский"</h1>
+          <h1>Жилой комплекс <span>"Яблоновский"</span></h1>
           <div class="main_text">Краснодар,пгт. Яблоновский ул. Коцебовой</div>
           <div class="main_price">от 63 801 до 65 678 ₽/м²</div>
-          <button class="main_button">Узнать стоимость проэкта</button>
+          <button class="main_button">Узнать стоимость проекта</button>
         </div>
         <div class="slider_box">
           <div class="slider">
             <div class="slider_container">
               <p>Квартиры</p>
-              <p>от 63 801 ₽/м²</p>
+              <p class="bold_slider">от 63 801 ₽/м²</p>
             </div>
           </div>
           <div class="slider">
             <div class="slider_container">
               <p>Стоимость</p>
-              <p>от 4.44 млн ₽</p>
+              <p class="bold_slider">от 4.44 млн ₽</p>
             </div>
           </div>
           <div class="slider">
             <div class="slider_container">
               <p>Класс</p>
-              <p>Эконом</p>
+              <p class="bold_slider">Эконом</p>
             </div>
           </div>
           <div class="slider">
             <div class="slider_container">
               <p>Срок сдачи</p>
-              <p>Сдан</p>
+              <p class="bold_slider">Сдан</p>
             </div>
           </div>
         </div>
@@ -91,7 +92,7 @@
           </picture>
           <div>
             <p>Срок сдачи</p>
-            <p>2015</p>
+            <p class="bold_slider">2015</p>
           </div>
         </div>
         <div class="slider_notification">
@@ -100,7 +101,7 @@
           </picture>
           <div>
             <p>Этажность</p>
-            <p>10</p>
+            <p class="bold_slider">10</p>
           </div>
         </div>
         <div class="slider_notification">
@@ -109,7 +110,7 @@
           </picture>
           <div>
             <p>Тип дома</p>
-            <p>Кирпичный</p>
+            <p class="bold_slider">Кирпичный</p>
           </div>
         </div>
         <div class="slider_notification">
@@ -118,7 +119,7 @@
           </picture>
           <div>
             <p>Класс дома</p>
-            <p>Эконом</p>
+            <p class="bold_slider">Эконом</p>
           </div>
         </div>
         <div class="slider_notification">
@@ -127,7 +128,7 @@
           </picture>
           <div>
             <p>Отделка</p>
-            <p>Чистовая</p>
+            <p class="bold_slider">Чистовая</p>
           </div>
         </div>
         <div class="slider_notification">
@@ -136,7 +137,7 @@
           </picture>
           <div>
             <p>Корпусов</p>
-            <p>2 Корпуса</p>
+            <p class="bold_slider">2 Корпуса</p>
           </div>
         </div>
         <div class="slider_notification">
@@ -145,7 +146,7 @@
           </picture>
           <div>
             <p>Парковка</p>
-            <p>Гостевая</p>
+            <p class="bold_slider">Гостевая</p>
           </div>
         </div>
         <div class="slider_notification">
@@ -154,31 +155,90 @@
           </picture>
           <div>
             <p>Территория</p>
-            <p>Дет. площадки</p>
+            <p class="bold_slider">Дет. площадки</p>
           </div>
         </div>
       </div>
       <div class="maps">
-        <div class="header_maps">Наша инфоструктура</div>
+        <div class="header_maps">Наша инфраструктура</div>
+        <div class="container_maps">
+          <div id="map" style="width: 100%; height: 663px"></div>
+        </div>
       </div>
       <div class="notification_product">
         <div class="tittle_product">Описание жилого комплекса</div>
         <div class="tittle_navigation">
-          Нажимайте "<>" чтобы подробно ознакомится с проэктом
+          Нажимайте "<>" чтобы подробно ознакомится с проектом
         </div>
         <div class="navigation_notifications">
-          <ul>
-            <li>Парковка</li>
-            <li>Охрана</li>
-            <li>Архитектура</li>
-            <li>Территория</li>
-          </ul>
+          <div class="notification_menu"><div>Парковка</div></div>
+          <div class="notification_menu"><div>Охрана</div></div>
+          <div class="notification_menu"><div>Архитектура</div></div>
+          <div class="notification_menu"><div>Территория</div></div>
         </div>
         <div class="img_notification">
-          <div class="main_img"></div>
-          <div class="images_notifications"></div>
+          <div class="main_img">
+            <div class="img_text">
+              <div>Территория</div>
+              <p class="first_paragraph">
+                Жилой комплекс "Яблоновский" расположен на ул. Кобцевой Н.С. в
+                пгт. Яблоновский. За пять минут пешком можно дойти до
+                муниципальной поликлиники, школы и детского садика.
+              </p>
+              <p class="second_paragraph">
+                Этот жилой комплекс располагается в непосредственной близости от
+                улицы Гагарина, где проходит абсолютное большинство маршрутов
+                общественного транспорта, соответственно легко добраться во все
+                части поселка и города Краснодар. Тут же располагается магазин
+                «Магнит», «Магнит Косметик», МФЦ, овощной рынок, мебельные
+                магазины, аптеки и другие предприятия сферы услуг.
+              </p>
+            </div>
+          </div>
+          <div class="images_notifications">
+            <div><img src="image/complex1.jpg" /></div>
+            <div><img src="image/complex2.jpg" /></div>
+            <div><img src="image/complex3.jpg" /></div>
+          </div>
         </div>
       </div>
+      <footer>
+        <div class="footer">
+          <div class="footer_title">
+            Узнайте о выгодных предложениях и получите личную консультацию
+          </div>
+          <div class="footer_container">
+            <div class="footer_contact">
+              <div>По любым возникающим Вами вопросов звоните нам напрямую</div>
+              <div class="footer_telephone">
+                <img src="image/tel.png" /> <span>+7 (918) 377-48-10</span>
+              </div>
+            </div>
+            <div class="footer_form">
+              <span>Cейчас мы работаем</span>
+              <div>
+                <div class="user_form">
+                  <div>Или заполните форму</div>
+                  <form class="flex_form">
+                    <input type="text" value="Ваше имя" class="name" />
+                    <input type="text" value="Ваш телефон" class="telephone" />
+                    <input type="text" value="Ваш emeil" class="email" /><input
+                      type="submit"
+                      value="Отправить"
+                      class="footer_button"
+                    />
+                    <p>
+                      <input type="checkbox" checked class="agreement" />Я
+                      принимаю условия
+                      <span>обработки персональных данных</span>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
