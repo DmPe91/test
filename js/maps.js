@@ -25,6 +25,8 @@ function init() {
       iconImageHref: "image/geo.png",
 
       iconImageSize: [61, 61],
+
+      balloonContentBody: "ЖК",
     }
   );
   var placemark_gas_station = new ymaps.Placemark(
@@ -69,8 +71,8 @@ function init() {
 
   ButtonLayout = ymaps.templateLayoutFactory.createClass(
     [
-      '<div  class="maps-button" >',
-      '<div onclick="{{data.func}}">',
+      '<div  class="maps-button {{data.name}}" >',
+      "<div>",
       '<img class="maps-button__img" src="{{ data.image }}" alt="{{ data.title }}">',
       '<span class="maps-button__text">{{ data.content }}</span>',
       "</div>",
@@ -81,11 +83,7 @@ function init() {
     data: {
       content: "ЖК Яблоновский",
       image: "image/geo.png",
-      func: () => {
-        placemark_complex
-          ? myMap.geoObjects.remove(placemark_complex)
-          : myMap.geoObjects.add(placemark_complex);
-      },
+      name: "complex",
     },
     options: {
       layout: ButtonLayout,
@@ -95,11 +93,8 @@ function init() {
     data: {
       content: "Поликлиника",
       image: "image/medical.png",
-      func: () => {
-        placemark_complex
-          ? myMap.geoObjects.remove(placemark_complex)
-          : myMap.geoObjects.add(placemark_complex);
-      },
+
+      name: "clinic",
     },
     options: {
       layout: ButtonLayout,
@@ -109,11 +104,8 @@ function init() {
     data: {
       content: "Детский сад",
       image: "image/children.png",
-      func: () => {
-        placemark_complex
-          ? myMap.geoObjects.remove(placemark_complex)
-          : myMap.geoObjects.add(placemark_complex);
-      },
+
+      name: "kindergarten",
     },
     options: {
       layout: ButtonLayout,
@@ -123,11 +115,8 @@ function init() {
     data: {
       content: "Магазин",
       image: "image/shop.png",
-      func: () => {
-        placemark_complex
-          ? myMap.geoObjects.remove(placemark_complex)
-          : myMap.geoObjects.add(placemark_complex);
-      },
+
+      name: "shop",
     },
     options: {
       layout: ButtonLayout,
@@ -137,11 +126,8 @@ function init() {
     data: {
       content: "АЗС",
       image: "image/azs.png",
-      func: () => {
-        placemark_complex
-          ? myMap.geoObjects.remove(placemark_complex)
-          : myMap.geoObjects.add(placemark_complex);
-      },
+
+      name: "gas-station",
     },
     options: {
       layout: ButtonLayout,

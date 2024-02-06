@@ -1,23 +1,91 @@
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="ЖК Яблоновский" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="font/font.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./mobile.css" />
-    <script src="js/jquery-3.7.1.min.js"></script>
+
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=66938b4d-ba70-4172-9889-919f26624532&lang=ru_RU"
       type="text/javascript"
     ></script>
     <script src="js/maps.js"></script>
+    <script src="js/mobile.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="main_header">
         <header>
           <div class="header">
+            <div class="main_mobile_header">
+              <div class="mobile_navigation">
+                <div class="mobile_logo">
+                  <picture>
+                    <img src="image/logo_mobile2.png" />
+                  </picture>
+                  <div class="mobile_menu" onclick="Exit()">
+                    <picture>
+                      <img src="image/exit_menu.png" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <nav class="dropdown">
+                <ul>
+                  <li>
+                    Жилые комплексы
+                    <ul>
+                      <li>ЖК Космос</li>
+                      <li>ЖК Яблоновский</li>
+                      <li>ЖК на Шоссейной</li>
+                      <li>ЖК Солнечная</li>
+                    </ul>
+                  </li>
+                  <li>О компании</li>
+                  <li>
+                    Как купить
+                    <ul>
+                      <li>Ипотека</li>
+                      <li>Военная ипотека</li>
+                      <li>Материнский капитал</li>
+                      <li>Наличный рассчет</li>
+                      <li>Рассрочка</li>
+                    </ul>
+                  </li>
+                  <li>Контакты</li>
+                  <li>+7 (918) 377-48-10</li>
+                  <li>Заказать звонок</li>
+                </ul>
+              </nav>
+            </div>
+            <div class="mobile_header">
+              <div class="mobile_navigation">
+                <div class="mobile_logo">
+                  <picture>
+                    <img src="image/logo_mobile1.png" />
+                  </picture>
+                  <div class="mobile_menu" onclick="Mobile()">
+                    <p>Меню</p>
+                    <picture>
+                      <img src="image/menu_mobile.png" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile_navbar">
+                <div>Главная / Жилые комплексы / / Яблоновский</div>
+              </div>
+            </div>
             <div class="logo">
               <picture>
                 <img src="image/logo_test.png" />
@@ -58,104 +126,116 @@
           <div class="main_price">от 63 801 до 65 678 ₽/м²</div>
           <button class="main_button">Узнать стоимость проекта</button>
         </div>
-        <div class="slider_box">
-          <div class="slider">
-            <div class="slider_container">
-              <p>Квартиры</p>
-              <p class="bold_slider">от 63 801 ₽/м²</p>
+        <div class="swiper-s1">
+          <div class="swiper-wrapper slider_box">
+            <div class="slider swiper-slide">
+              <div class="slider_container">
+                <p>Квартиры</p>
+                <p class="bold_slider">от 63 801 ₽/м²</p>
+              </div>
             </div>
-          </div>
-          <div class="slider">
-            <div class="slider_container">
-              <p>Стоимость</p>
-              <p class="bold_slider">от 4.44 млн ₽</p>
+            <div class="slider swiper-slide">
+              <div class="slider_container">
+                <p>Стоимость</p>
+                <p class="bold_slider">от 4.44 млн ₽</p>
+              </div>
             </div>
-          </div>
-          <div class="slider">
-            <div class="slider_container">
-              <p>Класс</p>
-              <p class="bold_slider">Эконом</p>
+            <div class="slider swiper-slide">
+              <div class="slider_container">
+                <p>Класс</p>
+                <p class="bold_slider">Эконом</p>
+              </div>
             </div>
-          </div>
-          <div class="slider">
-            <div class="slider_container">
-              <p>Срок сдачи</p>
-              <p class="bold_slider">Сдан</p>
+            <div class="slider swiper-slide">
+              <div class="slider_container">
+                <p>Срок сдачи</p>
+                <p class="bold_slider">Сдан</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="slider_notifications">
-        <div class="slider_notification">
-          <picture>
-            <img src="image/Group 241.png" />
-          </picture>
-          <div>
-            <p>Срок сдачи</p>
-            <p class="bold_slider">2015</p>
+      <div class="swiper-s2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slider_notifications">
+            <div class="slider_notification">
+              <picture>
+                <img src="image/Group 241.png" />
+              </picture>
+              <div>
+                <p>Срок сдачи</p>
+                <p class="bold_slider">2015</p>
+              </div>
+            </div>
+            <div class="slider_notification">
+              <picture>
+                <img src="image/Group 242.png" />
+              </picture>
+              <div>
+                <p>Этажность</p>
+                <p class="bold_slider">10</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="slider_notification">
-          <picture>
-            <img src="image/Group 242.png" />
-          </picture>
-          <div>
-            <p>Этажность</p>
-            <p class="bold_slider">10</p>
+          <div class="swiper-slide slider_notifications">
+            <div class="slider_notification">
+              <picture>
+                <img src="image/Group 243.png" />
+              </picture>
+              <div>
+                <p>Тип дома</p>
+                <p class="bold_slider">Кирпичный</p>
+              </div>
+            </div>
+            <div class="slider_notification">
+              <picture>
+                <img src="image/Group 244.png" />
+              </picture>
+              <div>
+                <p>Класс дома</p>
+                <p class="bold_slider">Эконом</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="slider_notification">
-          <picture>
-            <img src="image/Group 243.png" />
-          </picture>
-          <div>
-            <p>Тип дома</p>
-            <p class="bold_slider">Кирпичный</p>
+          <div class="swiper-slide slider_notifications">
+            <div class="slider_notification">
+              <picture>
+                <img src="image/Group 245.png" />
+              </picture>
+              <div>
+                <p>Отделка</p>
+                <p class="bold_slider">Чистовая</p>
+              </div>
+            </div>
+            <div class="slider_notification">
+              <picture>
+                <img src="image/Group 246.png" />
+              </picture>
+              <div>
+                <p>Корпусов</p>
+                <p class="bold_slider">2 Корпуса</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="slider_notification">
-          <picture>
-            <img src="image/Group 244.png" />
-          </picture>
-          <div>
-            <p>Класс дома</p>
-            <p class="bold_slider">Эконом</p>
-          </div>
-        </div>
-        <div class="slider_notification">
-          <picture>
-            <img src="image/Group 245.png" />
-          </picture>
-          <div>
-            <p>Отделка</p>
-            <p class="bold_slider">Чистовая</p>
-          </div>
-        </div>
-        <div class="slider_notification">
-          <picture>
-            <img src="image/Group 246.png" />
-          </picture>
-          <div>
-            <p>Корпусов</p>
-            <p class="bold_slider">2 Корпуса</p>
-          </div>
-        </div>
-        <div class="slider_notification">
-          <picture>
-            <img src="image/Group 247.png" />
-          </picture>
-          <div>
-            <p>Парковка</p>
-            <p class="bold_slider">Гостевая</p>
-          </div>
-        </div>
-        <div class="slider_notification">
-          <picture>
-            <img src="image/Group 248.png" />
-          </picture>
-          <div>
-            <p>Территория</p>
-            <p class="bold_slider">Дет. площадки</p>
+          <div class="swiper-slide slider_notifications">
+            <div class="slider_notification">
+              <picture>
+                <img src="image/Group 247.png" />
+              </picture>
+              <div>
+                <p>Парковка</p>
+                <p class="bold_slider">Гостевая</p>
+              </div>
+            </div>
+            <div class="slider_notification">
+              <picture>
+                <img src="image/Group 248.png" />
+              </picture>
+              <div>
+                <p>Территория</p>
+                <p class="bold_slider">Дет. площадки</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -240,5 +320,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/swiper.js"></script>
   </body>
 </html>
